@@ -4,6 +4,20 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo $DEBIAN_FRONTEND
 
+# Next line supress message 'stdin: is not a tty error'
+if `tty -s`; then
+   mesg n
+fi
+
+# Set time zone
+apt-get install -q -y ntp
+echo "ntpdate ntp.ubuntu.com pool.ntp.org" > /etc/cron.daily/ntpdate
+echo "server pool.ntp.org" >> /etc/ntp.conf
+echo "Europe/Amsterdam" > /etc/timezone
+
+
+
+# Update & upgrade
 apt-get update -q -y
 apt-get upgrade -q -y
 
@@ -22,8 +36,6 @@ apt-get install -q -y apt-file && apt-file update
 
 apt-file search add-apt-repository
 
-apt-get install -q -y python-software-properties
-
 echo 
 echo
 echo
@@ -31,6 +43,8 @@ echo Please wait...
 echo
 echo
 echo 
+
+apt-get install -q -y python-software-properties
 
 apt-get install -q -y software-properties-common
 
