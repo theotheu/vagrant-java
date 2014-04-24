@@ -34,8 +34,6 @@ echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-se
 
 apt-get install -q -y apt-file && apt-file update
 
-apt-file search add-apt-repository
-
 echo 
 echo
 echo
@@ -43,6 +41,8 @@ echo Please wait...
 echo
 echo
 echo 
+
+apt-file search add-apt-repository
 
 apt-get install -q -y python-software-properties
 
