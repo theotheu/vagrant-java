@@ -14,7 +14,7 @@ apt-get install -q -y ntp
 echo "ntpdate ntp.ubuntu.com pool.ntp.org" > /etc/cron.daily/ntpdate
 echo "server pool.ntp.org" >> /etc/ntp.conf
 echo "Europe/Amsterdam" > /etc/timezone
-
+dpkg-reconfigure --frontend noninteractive tzdata
 
 
 # Update & upgrade
