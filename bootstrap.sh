@@ -21,7 +21,7 @@ dpkg-reconfigure --frontend noninteractive tzdata
 apt-get update -q -y
 apt-get upgrade -q -y
 
-apt-get -y -q install curl git
+apt-get -y -q install curl git mercurial meld
 
 # install postgress
 apt-get install -q -y postgresql-9.3
@@ -32,8 +32,6 @@ echo debconf shared/accepted-oracle-license-v1-1 select true |  sudo debconf-set
 
 echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections  
 
-apt-get install -q -y apt-file && apt-file update
-
 echo 
 echo
 echo
@@ -41,6 +39,8 @@ echo Please wait...
 echo
 echo
 echo 
+
+apt-get install -q -y apt-file && apt-file update
 
 apt-file search add-apt-repository
 
