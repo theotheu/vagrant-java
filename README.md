@@ -21,7 +21,7 @@ Destroying
 `vagrant destroy`
 
 
-Installation of ojdbc6.jar
+Installation of ojdbc6.jar (optional)
 --------------------------
 
 Search at google for actual location of ojdbc6.jar at ```https://www.google.nl/search?q=ojdbc6.jar+download```
@@ -50,3 +50,10 @@ Modify your POM to accomodate the version
 </project>
 `
 
+Installation of quartz (optional)
+--------------------------------
+clone repo
+
+`mvn install:install-file -DgroupId=org.opensymphony -DartifactId=quartz -Dversion=1.6.0 -Dpackaging=jar -Dfile=/home/vagrant/workspaces/aelba/aelba/doc/tools/maven/quartz/quartz-1.6.0.jar`
+
+`cp /home/vagrant/workspaces/aelba/aelba/doc/tools/maven/quartz/quartz-1.6.0.jar ~/.m2/repository/quartz/quartz/1.6.0`
