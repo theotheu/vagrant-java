@@ -33,3 +33,20 @@ Accept the license agreement and download the file.
 Install the plugin with
 `mvn install:install-file -Dfile=./ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.4  -Dpackaging=jar`
 
+Modify your POM to accomodate the version
+`
+<project ...>
+ 
+	<dependencies>>
+ 
+		<!-- ORACLE database driver -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.4</version>
+		</dependency>
+ 
+	</dependencies>
+</project>
+`
+
