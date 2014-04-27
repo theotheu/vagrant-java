@@ -54,6 +54,5 @@ Installation of quartz (optional)
 --------------------------------
 clone repo
 
-`mvn install:install-file -DgroupId=org.opensymphony -DartifactId=quartz -Dversion=1.6.0 -Dpackaging=jar -Dfile=/home/vagrant/workspaces/aelba/aelba/doc/tools/maven/quartz/quartz-1.6.0.jar`
+`mvn install:install-file -DgroupId=quartz -DartifactId=quartz -Dversion=1.6.0 -Dpackaging=jar -DpomFile=./quartz-1.6.0.pom -Dfile=./quartz-1.6.0.jar`
 
-`cp /home/vagrant/workspaces/aelba/aelba/doc/tools/maven/quartz/quartz-1.6.0.jar ~/.m2/repository/quartz/quartz/1.6.0`
