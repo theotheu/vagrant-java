@@ -20,11 +20,8 @@ dpkg-reconfigure --frontend noninteractive tzdata
 apt-get update -q -y
 apt-get upgrade -q -y
 
+# install packages
 apt-get -y -q install curl git wget mercurial meld
-
-
-# install postgress
-apt-get install -q -y postgresql-9.3
 
 # install java
 ### Unattented install, tnx to http://askubuntu.com/questions/190582/installing-java-automatically-with-silent-option
