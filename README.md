@@ -7,7 +7,9 @@ Installation of vagrant
 Initialization
 --------------
 `git clone https://github.com/theotheu/vagrant-java.git`
+
 `cd vagrant-java`
+
 `vagrant up`
 
 Connecting
