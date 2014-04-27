@@ -98,7 +98,7 @@ print_db_usage () {
 
 export DEBIAN_FRONTEND=noninteractive
 
-cat "export PATH=/usr/lib/postgresql/$PG_VERSION/bin/:$PATH" >> /etc/environment
+echo "export PATH=/usr/lib/postgresql/$PG_VERSION/bin/:$PATH" >> /etc/environment
 
 PROVISIONED_ON=/etc/vm_provision_on_timestamp
 if [ -f "$PROVISIONED_ON" ]
